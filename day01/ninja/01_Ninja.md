@@ -118,8 +118,6 @@ backpack/
 > Be smart, try to use as minimum command lines as you can.
 
 ``` shell
-# paste your command and output here
-```
 $ mkdir backpack
 ~$ ls
 backpack  Documents  draft1.txt        linux-essentials  Pictures  Templates  workshop
@@ -252,6 +250,8 @@ cash  credit_cards  id
 ./wallet/credit_cards:
 
 ./wallet/id:
+```
+
 
 
 ### Remove items
