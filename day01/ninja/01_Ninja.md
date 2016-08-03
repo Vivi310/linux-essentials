@@ -52,23 +52,25 @@ Sat Jul 30 16:31:48 EDT 2016
 > 7. jump anywhere you want to master the commands
 
 ``` shell
-$cd workshop/study/math/homework
-$pwd
-/home/vivi/workshop/study/math/homework
-$ls
-hw1
-$cd
-$pwd 
+vivi@vivi-VirtualBox:~$ ls
+Desktop  Documents  Downloads  examples.desktop  linux-essentials  Music  Pictures  Public  Templates  Videos  workspace
+vivi@vivi-VirtualBox:~$ cd /usr/local/lib/python2.7/dist-packages/
+vivi@vivi-VirtualBox:/usr/local/lib/python2.7/dist-packages$ ls
+vivi@vivi-VirtualBox:/usr/local/lib/python2.7/dist-packages$ pwd
+/usr/local/lib/python2.7/dist-packages
+vivi@vivi-VirtualBox:/usr/local/lib/python2.7/dist-packages$ cd
+vivi@vivi-VirtualBox:~$ pwd
 /home/vivi
-
-$ cd ../../etc
-$ pwd
-/etc
-$ ls
-acpi                    hosts                    profile
-adduser.conf            hosts.allow              profile.d
-alternatives            hosts.deny               protocols
-# ... ...
+vivi@vivi-VirtualBox:~$ cd /etc/kernel/postinst.d
+vivi@vivi-VirtualBox:/etc/kernel/postinst.d$ pwd
+/etc/kernel/postinst.d
+vivi@vivi-VirtualBox:/etc/kernel/postinst.d$ ls
+apt-auto-removal  initramfs-tools  pm-utils  unattended-upgrades  update-notifier  zz-update-grub
+vivi@vivi-VirtualBox:/etc/kernel/postinst.d$ cd
+vivi@vivi-VirtualBox:~$ pwd
+/home/vivi
+vivi@vivi-VirtualBox:~$ ls
+Desktop  Documents  Downloads  examples.desktop  linux-essentials  Music  Pictures  Public  Templates  Videos  workspace
 ```
 
 ``` shell
@@ -118,99 +120,89 @@ backpack/
 > Be smart, try to use as minimum command lines as you can.
 
 ``` shell
-$ mkdir backpack
-~$ ls
-backpack  Documents  draft1.txt        linux-essentials  Pictures  Templates  workshop
-Desktop   Downloads  examples.desktop  Music             Public    Videos     workspace
-~$ cd backpack
-~/backpack$ mkdir backup_wallet
-~/backpack$ cd backup_wallet
-~/backpack/backup_wallet$ mkdir cash credit_cards id
-~/backpack/backup_wallet$ ls -l
-total 12
-drwxrwxr-x 2 vivi vivi 4096 Jul 30 16:58 cash
-drwxrwxr-x 2 vivi vivi 4096 Jul 30 16:58 credit_cards
-drwxrwxr-x 2 vivi vivi 4096 Jul 30 16:58 id
-~/backpack/backup_wallet$ cd ../
-~/backpack$ mkdir -p lunchboc/level1/fish_and_meat
-~/backpack$ mkdir -p lunchbox/level2/rice
-~/backpack$ mkdir -p lunchbox/level3/soup
-~/backpack$ ls -R
-.:
-backup_wallet  lunchbox
-
-./backup_wallet:
+vivi@vivi-VirtualBox:~/workspace/day1/homework$ ls
+vivi@vivi-VirtualBox:~/workspace/day1/homework$ mkdir backup_wallet lunchbox mainspace secretspace
+vivi@vivi-VirtualBox:~/workspace/day1/homework$ ls
+backup_wallet  lunchbox  mainspace  secretspace
+vivi@vivi-VirtualBox:~/workspace/day1/homework$ cd backup_wallet
+vivi@vivi-VirtualBox:~/workspace/day1/homework/backup_wallet$ touch cash credit_cards id
+vivi@vivi-VirtualBox:~/workspace/day1/homework/backup_wallet$ ls
 cash  credit_cards  id
-
-./backup_wallet/cash:
-
-./backup_wallet/credit_cards:
-
-./backup_wallet/id:
-
-./lunchbox:
+vivi@vivi-VirtualBox:~/workspace/day1/homework/backup_wallet$ cd ../lunchbox
+vivi@vivi-VirtualBox:~/workspace/day1/homework/lunchbox$ mkdir level1 level2 level3
+vivi@vivi-VirtualBox:~/workspace/day1/homework/lunchbox$ ls
+level1  level2  level3
+vivi@vivi-VirtualBox:~/workspace/day1/homework/lunchbox$ touch level1/fish_and_meat level2/rice level3/soup
+vivi@vivi-VirtualBox:~/workspace/day1/homework/lunchbox$ ls -R
+.:
 level1  level2  level3
 
-./lunchbox/level1:
+./level1:
 fish_and_meat
 
-./lunchbox/level1/fish_and_meat:
+./level2:
+rice
 
-./lunchbox/level2:
-rich
-
-./lunchbox/level2/rich:
-
-./lunchbox/level3:
+./level3:
 soup
+vivi@vivi-VirtualBox:~/workspace/day1/homework/lunchbox$ cd ../mainspace
+vivi@vivi-VirtualBox:~/workspace/day1/homework/mainspace$ mkdir books iphone kindle plasticbag umbrella
+vivi@vivi-VirtualBox:~/workspace/day1/homework/mainspace$ ls
+books  iphone  kindle  plasticbag  umbrella
+vivi@vivi-VirtualBox:~/workspace/day1/homework/mainspace$ touch plasticbag/cloth
+vivi@vivi-VirtualBox:~/workspace/day1/homework/mainspace$ ls -R
+.:
+books  iphone  kindle  plasticbag  umbrella
 
-./lunchbox/level3/soup:
+./books:
 
-~/backpack$ mkdir mainspace secretspace
-~/backpack$ cd mainspace
-~/backpack/mainspace$ mkdir books iphone kindle plasticbag umbrella
-~/backpack/mainspace$ mkdir plasticbag/cloth
-~/backpack/mainspace$ cd ../
-~/backpack$ cd secretspace
-~/backpack/secretspace$ mkdir cash001 cash002 cash003 paperwarraper
-~/backpack/secretspace$ ls
-cash001  cash002  cash003  paperwarrapper
-~/backpack/secretspace$ mkdir paperwarrapper/million_check
-~/backpack/secretspace$ cd ../../
-~$ cd backpack
-~/backpack$ ls
-backup_wallet  luchbox  lunch  lunchbox  mainspace  secretspace  wallet
-vivi@vivi-VirtualBox:~/backpack$ cp -r backup_wallet wallet
-vivi@vivi-VirtualBox:~/backpack$ ls -R
+./iphone:
+
+./kindle:
+
+./plasticbag:
+cloth
+
+./umbrella:
+vivi@vivi-VirtualBox:~/workspace/day1/homework/mainspace$ cd ../secretspace/
+vivi@vivi-VirtualBox:~/workspace/day1/homework/secretspace$ mkdir cash001 cash002 cash003 paperwarraper
+vivi@vivi-VirtualBox:~/workspace/day1/homework/secretspace$ ls
+cash001  cash002  cash003  paperwarraper
+vivi@vivi-VirtualBox:~/workspace/day1/homework/secretspace$ touch paperwarraper/million_check
+vivi@vivi-VirtualBox:~/workspace/day1/homework/secretspace$ ls -R
+.:
+cash001  cash002  cash003  paperwarraper
+
+./cash001:
+
+./cash002:
+
+./cash003:
+
+./paperwarraper:
+million_check
+vivi@vivi-VirtualBox:~/workspace/day1/homework/secretspace$ cd ../
+vivi@vivi-VirtualBox:~/workspace/day1/homework$ cp -r backup_wallet wallet
+vivi@vivi-VirtualBox:~/workspace/day1/homework$ ls
+backup_wallet  lunchbox  mainspace  secretspace  wallet
+vivi@vivi-VirtualBox:~/workspace/day1/homework$ ls -R
 .:
 backup_wallet  lunchbox  mainspace  secretspace  wallet
 
 ./backup_wallet:
 cash  credit_cards  id
 
-./backup_wallet/cash:
-
-./backup_wallet/credit_cards:
-
-./backup_wallet/id:
-
 ./lunchbox:
 level1  level2  level3
 
 ./lunchbox/level1:
 fish_and_meat
 
-./lunchbox/level1/fish_and_meat:
-
 ./lunchbox/level2:
-rich
-
-./lunchbox/level2/rich:
+rice
 
 ./lunchbox/level3:
 soup
-
-./lunchbox/level3/soup:
 
 ./mainspace:
 books  iphone  kindle  plasticbag  umbrella
@@ -224,12 +216,10 @@ books  iphone  kindle  plasticbag  umbrella
 ./mainspace/plasticbag:
 cloth
 
-./mainspace/plasticbag/cloth:
-
 ./mainspace/umbrella:
 
 ./secretspace:
-cash001  cash002  cash003  paperwarrapper
+cash001  cash002  cash003  paperwarraper
 
 ./secretspace/cash001:
 
@@ -237,19 +227,12 @@ cash001  cash002  cash003  paperwarrapper
 
 ./secretspace/cash003:
 
-./secretspace/paperwarrapper:
+./secretspace/paperwarraper:
 million_check
-
-./secretspace/paperwarrapper/million_check:
 
 ./wallet:
 cash  credit_cards  id
 
-./wallet/cash:
-
-./wallet/credit_cards:
-
-./wallet/id:
 ```
 
 
@@ -321,38 +304,11 @@ vivi@vivi-VirtualBox:~/backpack$
 > There is a option for `ls` command to list all hidden files, find it out and use it for finding hidden files. (Tip: try `ls --help`)
 
 ``` shell
-~/backpack$ ls .?*
-backpack  Documents  draft1.txt        linux-essentials  Pictures  Templates  workshop
-Desktop   Downloads  examples.desktop  Music             Public    Videos     workspace
-~/backpack$ cd
-~$ ls .?*
-.bash_history  .bashrc  .ICEauthority  .sudo_as_admin_successful  .vboxclient-display.pid      .vboxclient-seamless.pid  .xsession-errors
-.bash_logout   .dmrc    .profile       .vboxclient-clipboard.pid  .vboxclient-draganddrop.pid  .Xauthority               .xsession-errors.old
-
-..:
-vivi
-
-.cache:
-compizconfig-1                                                              gnome-software  logrotate  wallpaper
-event-sound-cache.tdb.43ed5fd4f9c944f492b320397ff67b25.x86_64-pc-linux-gnu  gstreamer-1.0   mozilla    zeitgeist-vacuum.stamp
-evolution                                                                   ibus            upstart
-
-.config:
-compiz-1  evolution      gtk-3.0  libaccounts-glib  pulse  update-notifier  user-dirs.dirs
-dconf     gnome-session  ibus     nautilus          unity  upstart          user-dirs.locale
-
-.gconf:
-
-.gnupg:
-private-keys-v1.d  S.gpg-agent
-
-.local:
-share
-
-.mozilla:
-extensions  firefox
-
-.ssh:
-id_rsa  id_rsa.pub
+vivi@vivi-VirtualBox:~$ ls -a
+.              .cache     Downloads         .ICEauthority     .nano     .sudo_as_admin_successful    .vboxclient-seamless.pid  .xsession-errors.old
+..             .config    examples.desktop  linux-essentials  Pictures  Templates                    Videos
+.bash_history  Desktop    .gconf            .local            .profile  .vboxclient-clipboard.pid    workspace
+.bash_logout   .dmrc      .gitconfig        .mozilla          Public    .vboxclient-display.pid      .Xauthority
+.bashrc        Documents  .gnupg            Music             .ssh      .vboxclient-draganddrop.pid  .xsession-errors
 
 ```
