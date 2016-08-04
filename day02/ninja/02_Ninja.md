@@ -120,7 +120,7 @@ vivi@vivi-VirtualBox:~$ grep -n QUINCE /home/vivi/linux-essentials/day02/src/dra
 # How many types of SEX do you see in the data?
 # Your answer:3
 # How many lines of SEX=2 in the data? (Hint: use grep with pattern: ^2, )
-# Your answer:
+# Your answer:102
 # What's the POPESTIMATE2015 value of AGE=25 for different SEX? (Hint: think about the pattern before grep)
 # Your answers:
 ```
@@ -144,6 +144,17 @@ SEX,AGE,CENSUS2010POP,ESTIMATESBASE2010,POPESTIMATE2010,POPESTIMATE2011,POPESTIM
 0,7,4030579,4030594,4043046,4083225,4084913,4108349,4155326,4148360
 0,8,4046486,4046497,4025604,4053203,4093177,4095711,4120903,4167887
 ... ...
+vivi@vivi-VirtualBox:~$ grep -n ^2 /home/vivi/linux-essentials/day02/src/data/NC-EST2015-AGESEX-RES.csv 
+206:2,0,1929877,1929882,1932910,1934660,1918823,1921613,1929449,1942904
+207:2,1,1947217,1947229,1937556,1941029,1942479,1927402,1931375,1939269
+208:2,2,2004731,2004737,2002177,1944592,1948000,1950071,1935991,1939979
+209:2,3,2014490,2014496,2010648,2008174,1950628,1954558,1957483,1943417
+210:2,4,1985620,1985630,1993239,2015971,2013540,1956426,1961199,1964111
+211:2,5,1984764,1984770,1988080,1998260,2020907,2018871,1962561,1967310
+212:2,6,1991062,1991082,1993603,1993166,2003137,2026129,2024870,1968544
+... ...
+vivi@vivi-VirtualBox:~$ grep ^2 /home/vivi/linux-essentials/day02/src/data/NC-EST2015-AGESEX-RES.csv | wc 
+    102     102    6889
 # if the output is too long, don't paste all, use ... ... instead.
 ```
 
