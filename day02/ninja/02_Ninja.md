@@ -1,6 +1,6 @@
 # 02 Ninja
 
-> Ninja: replace_with_your_name
+> Ninja: Vivi
 
 [TOC]
 
@@ -165,7 +165,33 @@ vivi@vivi-VirtualBox:~$ grep ^2 /home/vivi/linux-essentials/day02/src/data/NC-ES
 > In this section, you are going to learn a new command `diff` which will help you to find the difference between files. Like `cp`, use `diff` is easy:
 
 ``` shell
-$ diff file1 file2 # compare difference between file1 and file2
+vivi@vivi-VirtualBox:~/workspace/day2/homework$ echo "yellow" > color1
+vivi@vivi-VirtualBox:~/workspace/day2/homework$ echo "blue" >> color1 
+vivi@vivi-VirtualBox:~/workspace/day2/homework$ echo "red" >> color1 
+vivi@vivi-VirtualBox:~/workspace/day2/homework$ echo "black" >> color1 
+vivi@vivi-VirtualBox:~/workspace/day2/homework$ cat color1 
+yellow
+blue
+red
+black
+vivi@vivi-VirtualBox:~/workspace/day2/homework$ echo "yellow" > color2
+vivi@vivi-VirtualBox:~/workspace/day2/homework$ echo "pink" >> color2
+vivi@vivi-VirtualBox:~/workspace/day2/homework$ echo "reeed" >> color2
+vivi@vivi-VirtualBox:~/workspace/day2/homework$ echo "white" >> color2
+vivi@vivi-VirtualBox:~/workspace/day2/homework$ cat color2
+yellow
+pink
+reeed
+white
+vivi@vivi-VirtualBox:~/workspace/day2/homework$ diff color1 color2
+2,4c2,4
+< blue
+< red
+< black
+---
+> pink
+> reeed
+> white
 ```
 
 **Example**
@@ -213,7 +239,29 @@ $ diff fruits1 fruits2 # find difference between fruits1 and fruits2
 > 10. Find something?
 
 ``` shell
-# paste your command and output here
+vivi@vivi-VirtualBox:~/workspace/day2/homework/test2$ echo "hello" > a
+vivi@vivi-VirtualBox:~/workspace/day2/homework/test2$ ln -s a b
+vivi@vivi-VirtualBox:~/workspace/day2/homework/test2$ cp a c 
+vivi@vivi-VirtualBox:~/workspace/day2/homework/test2$ ls
+a  b  c
+vivi@vivi-VirtualBox:~/workspace/day2/homework/test2$ cat a
+hello
+vivi@vivi-VirtualBox:~/workspace/day2/homework/test2$ cat b
+hello
+vivi@vivi-VirtualBox:~/workspace/day2/homework/test2$ cat c
+hello
+vivi@vivi-VirtualBox:~/workspace/day2/homework/test2$ diff a b
+vivi@vivi-VirtualBox:~/workspace/day2/homework/test2$ diff a c
+vivi@vivi-VirtualBox:~/workspace/day2/homework/test2$ echo "world to c" >> c
+vivi@vivi-VirtualBox:~/workspace/day2/homework/test2$ diff a c
+1a2
+> world to c
+vivi@vivi-VirtualBox:~/workspace/day2/homework/test2$ echo "world to b" >> b
+vivi@vivi-VirtualBox:~/workspace/day2/homework/test2$ diff a b
+vivi@vivi-VirtualBox:~/workspace/day2/homework/test2$ cat b
+hello
+world to b
+vivi@vivi-VirtualBox:~/workspace/day2/homework/test2$ diff a b
 ```
 
 ### Powerful Pipeline
@@ -223,5 +271,6 @@ $ diff fruits1 fruits2 # find difference between fruits1 and fruits2
 > Only ONE SINGLE command line is enough
 
 ``` shell
-# paste your command and output here
+vivi@vivi-VirtualBox:~$ history | grep cd | wc
+     13      41     215
 ```
