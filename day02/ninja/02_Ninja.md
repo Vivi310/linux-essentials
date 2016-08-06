@@ -156,6 +156,12 @@ vivi@vivi-VirtualBox:~$ grep -n ^2 /home/vivi/linux-essentials/day02/src/data/NC
 vivi@vivi-VirtualBox:~$ grep ^2 /home/vivi/linux-essentials/day02/src/data/NC-EST2015-AGESEX-RES.csv | wc 
     102     102    6889
 # if the output is too long, don't paste all, use ... ... instead.
+
+vivi@vivi-VirtualBox:~/linux-essentials/day02/src/data$ grep -w "25" ./NC-EST2015-AGESEX-RES.csv | awk -F ',' '{print$9}'
+4511370
+2296875
+2214495
+
 ```
 
 ## Challenge
